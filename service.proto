@@ -1,0 +1,10 @@
+syntax = "proto3";
+package service;
+
+import "message.proto";
+
+option go_package = "./pb";
+
+service UseService {
+	rpc Fetch(message.Id) returns (message.User);
+}
